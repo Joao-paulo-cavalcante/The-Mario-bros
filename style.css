@@ -259,10 +259,11 @@ section {
   .content-descricao .nome {
     width: 100%;
   }
-  .link1 {
-    width: 200px;
-  }
-  .link2 {
-    width: 200px;
-  }
+     .link1{
+        width: 150px;
+       }
+    .link2{
+        width: 150px;
+    
+       }
 }/*# sourceMappingURL=style.css.map */
