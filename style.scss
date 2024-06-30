@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+  
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+ 
+   
+}
+.background{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    z-index: -1000;
+    video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.background::after{
+    content: "";
+    width: inherit;
+    height: inherit;
+    position: fixed;
+    inset: 0;
+    background: rgb(13,13,13);
+    background: linear-gradient(135deg, rgba(13,13,13,0.9654236694677871) 0%, rgba(0,0,0,0.27914915966386555) 37%, rgba(0,0,0,0.9374124649859944) 100%);
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.header{
+    
+    height: 10%;
+    width: 100%;
+}
+
+.header_content{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+.chapeu{
+    display: flex;
+    align-items: center;
+    img{
+        width: 70px;
+        height: auto;
+        }
+}
+.menu{
+    padding-left: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}       
+.menu_opcoes{  
+    display: flex;
+    gap: 50px;
+    a{
+        text-decoration: none;
+         color: rgba(255, 255, 255, 0.829);
+        font-weight: bold;
+        
+    }
+    a:hover{
+        animation: menu-animado  0.5s;
+        animation-fill-mode: forwards;
+    }
+} 
+.social_media{
+    padding-right: 10px;
+    img{
+        opacity: 0.5;
+        margin: 5px;
+        width: 30px;
+                
+        }
+    img:hover{
+        cursor: pointer;
+        animation: icones  0.5s;
+        animation-fill-mode: forwards;
+    }
+}
+           
+section{
+    width: 100%;
+    padding-top: 30px;
+    
+} 
+.content{
+    width: 100%;
+    display: flex;
+}        
+.lateral{
+    width: 50%;                 
+    display: flex;
+    align-items: center;
+}          
+.content-descricao{
+    display: flex;
+    flex-direction: column;
+     width: 85%;     
+    img{    
+        
+     max-width: 250px;
+    height: auto;
+     }
+     p{  
+     margin-top: 30px;
+    margin-bottom: 20PX;
+    color: white;
+    line-height: 20PX;                   
+    }
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+        .link1{
+            background-color: rgb(175, 51, 51);
+            color: white;
+            letter-spacing: 0.3px;
+            padding: 15px 40px;
+            font-weight: bold;
+            transform: skew(-10deg);
+            text-align: center;
+            }
+            .link1:hover{
+            cursor: pointer;
+            animation: link1 0.5s;
+            animation-fill-mode: forwards;
+            }
+        .link2{
+            background-color: transparent;
+            border: 1px solid green;
+            color: white;
+            letter-spacing: 0.3px;
+            font-weight: bold;
+            padding: 15px 40px;
+            transform: skew(-10deg);
+            
+            text-align: center;
+            }    
+            .link2:hover{
+                cursor: pointer;
+                animation: link2 0.5s;
+                animation-fill-mode:forwards;
+            }
+    }
+.imagen_mario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;    
+    padding-top: 20px;
+}
+@keyframes menu-animado {
+    from{
+        position: relative;
+        bottom: 0px;
+    }
+    to{
+        
+        color: rgb(241, 59, 59);
+        position: relative;
+        bottom: 5px;
+    }
+}
+@keyframes icones{
+    from{
+        
+        position: relative;
+        bottom: 0px;
+        opacity: 0.5;
+    }
+    to{
+        position: relative;
+        bottom: 10px;
+        opacity: 1;
+    }
+}
+@keyframes link1{
+    from{
+        background-color: rgb(175, 51, 51);
+    }
+    to{
+        background-color: rgb(255, 6, 6);
+    }
+}
+@keyframes link2{
+    to{
+        background-color: rgb(14, 119, 40);
+    }
+}
+
+@media screen and (max-width:1600px){
+    .social_media{
+        display: none;
+    }
+    .header_content{
+        justify-content: space-between;
+    }
+    .menu{
+        width:auto ;
+
+    }
+    .link1{
+        width: 150px;
+       }
+    .link2{
+        width: 150px;
+    
+       }
+}
+@media screen and (max-width:1400px){
+   .content{
+    flex-direction: column-reverse;
+   }
+    .lateral{
+        padding-top: 30px;
+    justify-content: center;
+    width: 100%;
+   }
+   .imagen_mario{
+    width: 100%;
+    img{
+        width: 50%;
+    }
+  
+   }
+    .content-descricao{
+        display: flex;
+        text-align: center;
+        .nome{
+            width:100%;
+        }
+    }
+    .link1{
+        width: 150px;
+       }
+    .link2{
+        width: 150px;
+    
+       }
+   
+}
