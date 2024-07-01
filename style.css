@@ -210,6 +210,9 @@ section {
     .header{
         padding: 50px;
     }
+    section{
+        padding-left: 50px;
+    }
    .content{
     flex-direction: column-reverse;
     padding-top: 50px;
