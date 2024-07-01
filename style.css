@@ -208,9 +208,19 @@ section {
 }
 @media screen and (max-width:1600px){
     .header{
-        padding-top: 50px;
-       
+        padding: 50px;
     }
+   .content{
+    flex-direction: column-reverse;
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+   }
+    .lateral{
+        justify-content: center;
+        margin-top: 300PX;
+        width: 100%;
+   }
     .social_media{
         display: none;
     }
@@ -221,14 +231,6 @@ section {
         width:auto ;
 
     }
-    .content{
-        height: 80vh;
-        
-    }
-    .lateral{
-        height: 100vh;  
-    }
-
     .link1{
         width: 150px;
        }
@@ -236,16 +238,9 @@ section {
         width: 150px;
     
        }
+       }
 }
 @media screen and (max-width: 1400px) {
-  .content {
-    flex-direction: column-reverse;
-  }
-  .lateral {
-    padding-top: 30px;
-    justify-content: center;
-    width: 100%;
-  }
   .imagen_mario {
     width: 100%;
   }
